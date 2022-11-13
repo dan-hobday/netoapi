@@ -1,2 +1,2 @@
 # netoapi
-A Python API client for the Neto Ecommerce platform
+A Python API client for the Neto Ecommerce platform (Under development)
