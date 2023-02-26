@@ -1,4 +1,4 @@
-from api_session import NetoAPISession, get_api_session
+from api_session import get_api_session
 import errors
 
 
@@ -9,7 +9,7 @@ class NetoAPIClient:
     def __init__(self, endpoint: str, username: str, key: str) -> None:
         self.endpoint = endpoint
 
-        self._session: NetoAPISession = get_api_session()
+        self._session = get_api_session()
         self._session.auth_session(username, key)
 
         self._connection_timeout = 5

@@ -39,23 +39,22 @@ import sys
 
 if sys.version_info < (3, 7):
     raise Warning(
-        f"NetoAPI supports Python3.7 or greater. You are on V{sys.version_info.major}.{sys.version_info.minor}"
+        f"NetoAPI supports Python3.7 or greater. You are using V{sys.version_info.major}.{sys.version_info.minor}"
     )
 
 import logging
-from logging import NullHandler
 
-logging.getLogger(__name__).addHandler(NullHandler())
+logging.getLogger(__name__).addHandler(logging.NullHandler())
 
-import errors
+from .errors import DependencyNotFoundError, NetoAPIRequestError
 
 try:
     import requests
 except:
-    raise errors.DependencyNotFoundError(
-        "NetoAPI requires the requests library. Use: pip install requests"
+    raise DependencyNotFoundError(
+        "NetoAPI requires the requests library. Use >>> pip install requests"
     ) from None
 
 from .api_client import NetoAPIClient
 
-__all__ = [NetoAPIClient, errors]
+__all__ = [NetoAPIClient, NetoAPIRequestError]

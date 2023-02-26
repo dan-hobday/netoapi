@@ -1,23 +1,27 @@
-from typing import Any
+"""Provides transport pathways for API requests"""
+
 from abc import ABC, abstractmethod
 
 import requests
 
 
 class NetoAPISession(ABC):
-    """Abstract interface for API connection sessions"""
+    """Abstract interface for API transport sessions"""
 
     @abstractmethod
     def auth_session():
-        pass
+        """Sets the authentication headers to be sent with API requests.
+        These headers persist between requests."""
 
     @abstractmethod
     def send_request():
-        pass
+        """Fetches data from the API. The 'NETOAPI_ACTION' header is
+        appended to the session headers but does not persist
+        between requests."""
 
 
 class RequestsAPISession(NetoAPISession, requests.Session):
-    """A HTTP session which sub-classes requests.Session"""
+    """An HTTP session which sub-classes requests.Session"""
 
     def __init__(self) -> None:
         super().__init__()
@@ -39,4 +43,6 @@ class RequestsAPISession(NetoAPISession, requests.Session):
 
 
 def get_api_session():
+    """Returns a session object. This is the correct way to get a session,
+    rather than creating instances directly."""
     return RequestsAPISession()
