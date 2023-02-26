@@ -1,5 +1,5 @@
-from api_session import get_api_session
-import errors
+from .api_session import get_api_session
+from .errors import NetoAPIRequestError
 
 
 class NetoAPIClient:
@@ -50,7 +50,7 @@ class NetoAPIClient:
             api_response: dict = response.json()
 
         except Exception as e:
-            raise errors.NetoAPIRequestError(
+            raise NetoAPIRequestError(
                 f"An error occured during the request: {e}"
             ) from None
 
