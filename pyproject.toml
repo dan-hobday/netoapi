@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "netoapi"
-version = "0.0.2"
+version = "1.0.0"
 description = "A Python3 API Client for the Neto (Maropost) Ecommerce platform"
 authors = [
-  { name="Dan Hobday", email="dan.hobday@proton.me" },
+  { name="Dan Hobday", email="support@netoapi.org" },
 ]
 dependencies = ["requests"]
 readme = "README.md"

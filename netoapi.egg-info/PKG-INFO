@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: netoapi
+Version: 1.0.0
+Summary: A Python3 API Client for the Neto (Maropost) Ecommerce platform
+Author-email: Dan Hobday <support@netoapi.org>
+Project-URL: Homepage, https://github.com/dan-hobday/netoapi
+Project-URL: Bug Tracker, https://github.com/dan-hobday/netoapi/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # NetoAPI Library
 ### A Python API client for the <a href="https://www.netohq.com/" target="_blank">Neto</a> (Maropost) Ecommerce platform.
 </br>

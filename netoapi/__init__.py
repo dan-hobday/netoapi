@@ -52,7 +52,7 @@ try:
     import requests
 except:
     raise DependencyNotFoundError(
-        "NetoAPI requires the requests library. Use >>> pip install requests"
+        "NetoAPI requires the requests library. Use >>> pip install --upgrade requests"
     ) from None
 
 from .api_client import NetoAPIClient
