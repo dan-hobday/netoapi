@@ -1,3 +1,4 @@
+from __future__ import annotations
 from .api_session import get_api_session
 from .errors import NetoAPIRequestError
 
