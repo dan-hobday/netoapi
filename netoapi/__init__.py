@@ -46,7 +46,7 @@ import logging
 
 logging.getLogger(__name__).addHandler(logging.NullHandler())
 
-from .errors import DependencyNotFoundError, NetoAPIRequestError
+from netoapi.errors import DependencyNotFoundError, NetoAPIRequestError
 
 try:
     import requests

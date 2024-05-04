@@ -1,6 +1,6 @@
 from __future__ import annotations
-from .api_session import get_api_session
-from .errors import NetoAPIRequestError
+from netoapi.api_session import get_api_session
+from netoapi.errors import NetoAPIRequestError
 
 
 class NetoAPIClient:
