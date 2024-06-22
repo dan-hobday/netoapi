@@ -103,5 +103,5 @@ For more info see <a href="https://developers.maropost.com/documentation/enginee
 Written by <a href="https://github.com/dan-hobday" target="_blank">github.com/dan-hobday</a>
 
 ### Roadmap:
-* -> V1.0.0 - Current release
+* -> V1.0.1 - Current release
 * -> V1.1.0 - Map API fields to classes. This will make building payloads easier, less error prone and add support for field constraints.
